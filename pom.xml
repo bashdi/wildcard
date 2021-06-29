@@ -12,6 +12,7 @@
         <module>wildcard-starter</module>
         <module>wildcard-api</module>
         <module>wildcard-demoapp</module>
+        <module>wildcard-randomapp</module>
     </modules>
 
     <packaging>pom</packaging>

@@ -32,6 +32,11 @@
             <artifactId>wildcard-demoapp</artifactId>
             <version>${version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.bashdi.wildcard</groupId>
+            <artifactId>wildcard-randomapp</artifactId>
+            <version>${version}</version>
+        </dependency>
 
     </dependencies>
 
