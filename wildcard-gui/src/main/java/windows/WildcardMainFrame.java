@@ -2,7 +2,10 @@ package windows;
 
 import gui.WildcardGui;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
+import java.io.IOException;
 
 public class WildcardMainFrame extends JFrame implements WildcardGui {
 
@@ -11,6 +14,7 @@ public class WildcardMainFrame extends JFrame implements WildcardGui {
     private JList<String> jList;
 
     public WildcardMainFrame() {
+        setIcon();
         setSize(900, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
@@ -33,6 +37,19 @@ public class WildcardMainFrame extends JFrame implements WildcardGui {
         jSplitPane.setOrientation(JSplitPane.HORIZONTAL_SPLIT);
         jSplitPane.setDividerLocation(200);
     }
+
+
+
+    private void setIcon() {
+        try {
+            Image tImage = ImageIO.read(ClassLoader.getSystemResource("wildcard.png"));
+            setIconImage(tImage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
     @Override
     public JFrame getMainFrame() {
