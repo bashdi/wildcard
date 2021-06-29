@@ -11,6 +11,7 @@
         <module>wildcard-gui</module>
         <module>wildcard-starter</module>
         <module>wildcard-api</module>
+        <module>wildcard-demoapp</module>
     </modules>
 
     <packaging>pom</packaging>
