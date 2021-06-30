@@ -18,17 +18,25 @@ public class DemoApp implements WildcardApplication {
     }
 
     @Override
-    public JPanel getGui() {
+    public JPanel getPanel() {
         if (demoJPanel == null) {
             demoJPanel = new DemoJPanel(wildcardGuiManager);
         }
+        wildcardGuiManager.setTitle(getName());
         return demoJPanel;
+    }
+
+    @Override
+    public void post() {
+        wildcardGuiManager.setTitle(null);
+        wildcardGuiManager.clearMenuBar();
     }
 
     @Override
     public void setWildcardGuiManager(WildcardGuiManager wildcardGuiManager) {
         this.wildcardGuiManager = wildcardGuiManager;
     }
+
 
     @Override
     public String toString() {

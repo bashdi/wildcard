@@ -8,7 +8,9 @@ public interface WildcardApplication {
 
     public String getName();
 
-    public JPanel getGui();
+    public JPanel getPanel();
+
+    public void post();
 
     public void setWildcardGuiManager(WildcardGuiManager wildcardGuiManager);
 

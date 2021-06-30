@@ -4,8 +4,6 @@ import application.WildcardApplication;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.io.IOException;
 
@@ -15,9 +13,14 @@ public class WildcardMainFrame extends JFrame {
     private DefaultListModel<WildcardApplication> appList;
     private JList<WildcardApplication> jList;
     private JMenuBar wildcardMenuBar;
+    private final String FRAME_TITLE = "Wildcard";
+    private WildcardApplication previousApp;
+    //private List<JMenu> menuList;
+
+
 
     public WildcardMainFrame() {
-        setTitle("Wildcard");
+        setTitle(FRAME_TITLE);
         setIcon();
         setSize(900, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -30,14 +33,14 @@ public class WildcardMainFrame extends JFrame {
 
         appList = new DefaultListModel<>();
         jList = new JList<>(appList);
-        jList.addListSelectionListener(new ListSelectionListener() {
-            @Override
-            public void valueChanged(ListSelectionEvent e) {
-                if (e.getValueIsAdjusting()) {
-                    WildcardApplication tApp = jList.getSelectedValue();
-                    jSplitPane.setRightComponent(tApp.getGui());
+        jList.addListSelectionListener(e -> {
+            if (e.getValueIsAdjusting()) {
+                if (previousApp != null) {
+                    previousApp.post();
                 }
-
+                WildcardApplication tApp = jList.getSelectedValue();
+                previousApp = tApp;
+                jSplitPane.setRightComponent(tApp.getPanel());
             }
         });
         jSplitPane.setLeftComponent(jList);

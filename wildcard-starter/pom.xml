@@ -25,17 +25,17 @@
         <dependency>
             <groupId>com.github.bashdi.wildcard</groupId>
             <artifactId>wildcard-gui</artifactId>
-            <version>${version}</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.github.bashdi.wildcard</groupId>
             <artifactId>wildcard-demoapp</artifactId>
-            <version>${version}</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.github.bashdi.wildcard</groupId>
             <artifactId>wildcard-randomapp</artifactId>
-            <version>${version}</version>
+            <version>${project.version}</version>
         </dependency>
 
     </dependencies>
