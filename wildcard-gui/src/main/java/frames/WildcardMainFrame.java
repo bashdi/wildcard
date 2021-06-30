@@ -43,6 +43,7 @@ public class WildcardMainFrame extends JFrame {
                 jSplitPane.setRightComponent(tApp.getPanel());
             }
         });
+
         JScrollPane tJScrollPane = new JScrollPane();
         tJScrollPane.setViewportView(jList);
         jSplitPane.setLeftComponent(tJScrollPane);
