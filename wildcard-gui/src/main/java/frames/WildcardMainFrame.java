@@ -15,7 +15,7 @@ public class WildcardMainFrame extends JFrame {
     private JMenuBar wildcardMenuBar;
     private final String FRAME_TITLE = "Wildcard";
     private WildcardApplication previousApp;
-    //private List<JMenu> menuList;
+
 
 
 
@@ -43,7 +43,9 @@ public class WildcardMainFrame extends JFrame {
                 jSplitPane.setRightComponent(tApp.getPanel());
             }
         });
-        jSplitPane.setLeftComponent(jList);
+        JScrollPane tJScrollPane = new JScrollPane();
+        tJScrollPane.setViewportView(jList);
+        jSplitPane.setLeftComponent(tJScrollPane);
 
 
 
