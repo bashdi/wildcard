@@ -1,4 +1,5 @@
 import demo.DemoApp;
+import demo2.Demo2App;
 import random.RandomApp;
 
 public class Main {
@@ -7,6 +8,7 @@ public class Main {
 
         WildcardGui wildcardGui = new WildcardGui();
         wildcardGui.addWildcardApplication(new DemoApp());
+        wildcardGui.addWildcardApplication(new Demo2App());
         wildcardGui.addWildcardApplication(new RandomApp());
     }
 }
