@@ -37,6 +37,11 @@
             <artifactId>wildcard-randomapp</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.bashdi.wildcard</groupId>
+            <artifactId>wildcard-shutdownapp</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
     </dependencies>
 

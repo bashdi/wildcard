@@ -13,6 +13,7 @@
         <module>wildcard-api</module>
         <module>wildcard-demoapp</module>
         <module>wildcard-randomapp</module>
+        <module>wildcard-shutdownapp</module>
     </modules>
 
     <packaging>pom</packaging>
