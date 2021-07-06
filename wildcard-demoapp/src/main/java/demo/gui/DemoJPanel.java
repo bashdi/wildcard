@@ -50,4 +50,9 @@ public class DemoJPanel extends JPanel {
         jMenu.add(item2);
         jMenu.add(item3);
     }
+
+
+    public JMenu getjMenu() {
+        return jMenu;
+    }
 }

@@ -10,7 +10,7 @@ public class DemoApp implements WildcardApplication {
 
     WildcardGuiManager wildcardGuiManager;
 
-    static JPanel demoJPanel;
+    static DemoJPanel demoJPanel;
 
     @Override
     public String getName() {
@@ -21,6 +21,8 @@ public class DemoApp implements WildcardApplication {
     public JPanel getPanel() {
         if (demoJPanel == null) {
             demoJPanel = new DemoJPanel(wildcardGuiManager);
+        } else {
+            wildcardGuiManager.addToMenuBar(demoJPanel.getjMenu());
         }
         wildcardGuiManager.setTitle(getName());
         return demoJPanel;
