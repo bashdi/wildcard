@@ -1,11 +1,7 @@
 package com.github.bashdi.wildcard.shutdownapp.logic;
 
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
 
 public class TimeConverter {
 
@@ -18,7 +14,7 @@ public class TimeConverter {
     }
 
     public static String localDateTimeToString(LocalDateTime localDateTime) {
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yy hh:mm");
-        return localDateTime.format(dateTimeFormatter);
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yy HH:mm");
+        return dateTimeFormatter.format(localDateTime);
     }
 }
