@@ -14,6 +14,7 @@
         <module>wildcard-demoapp</module>
         <module>wildcard-randomapp</module>
         <module>wildcard-shutdownapp</module>
+        <module>wildcard-commons</module>
     </modules>
 
     <packaging>pom</packaging>

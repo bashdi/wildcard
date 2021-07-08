@@ -1,14 +1,10 @@
 package com.github.bashdi.wildcard.shutdownapp.gui;
 
-import com.github.bashdi.wildcard.shutdownapp.logic.TimeConverter;
+import com.github.bashdi.wildcard.commons.utilities.Time;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
 
 public class ShutdownPanel extends JPanel {
 
@@ -53,7 +49,7 @@ public class ShutdownPanel extends JPanel {
 
 
     private void updateTime(){
-        targetTimeValueLabel.setText(TimeConverter.localDateTimeToString(TimeConverter.addToCurrentTime(
+        targetTimeValueLabel.setText(Time.localDateTimeToString(Time.addToCurrentTime(
                 (int) hourSpinner.getValue(),
                 (int) minuteSpinner.getValue(),
                 (int) secondsSpinner.getValue()

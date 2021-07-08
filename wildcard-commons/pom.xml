@@ -9,25 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>wildcard-shutdownapp</artifactId>
+    <artifactId>wildcard-commons</artifactId>
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
-
-
-    <dependencies>
-        <dependency>
-            <groupId>com.github.bashdi.wildcard</groupId>
-            <artifactId>wildcard-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.bashdi.wildcard</groupId>
-            <artifactId>wildcard-commons</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
 
 </project>
