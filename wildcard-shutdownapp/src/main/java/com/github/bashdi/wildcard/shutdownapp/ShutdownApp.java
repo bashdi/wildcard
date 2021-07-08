@@ -21,6 +21,8 @@ public class ShutdownApp implements WildcardApplication {
     public JPanel getPanel() {
         if (shutdownPanel == null) {
             shutdownPanel = new ShutdownPanel();
+        } else {
+            shutdownPanel.updateTime();
         }
         wildcardGuiManager.setTitle(getName());
         return shutdownPanel;

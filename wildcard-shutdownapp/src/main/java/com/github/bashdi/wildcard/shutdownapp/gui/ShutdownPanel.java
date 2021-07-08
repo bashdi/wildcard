@@ -71,7 +71,7 @@ public class ShutdownPanel extends JPanel {
     }
 
 
-    private void updateTime(){
+    public void updateTime(){
         targetTimeValueLabel.setText(Time.localDateTimeToString(Time.addToCurrentTime(
                 (int) hourSpinner.getValue(),
                 (int) minuteSpinner.getValue(),
